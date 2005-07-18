@@ -1,0 +1,12 @@
+diff -Nur -x '*.orig' -x '*.rej' e-smith-lib-compspec-0.3.0/root/etc/profile.d/e-smith-lib_compspec.sh mezzanine_patched_e-smith-lib-compspec-0.3.0/root/etc/profile.d/e-smith-lib_compspec.sh
+--- e-smith-lib-compspec-0.3.0/root/etc/profile.d/e-smith-lib_compspec.sh	2005-07-18 00:15:59.598187000 -0600
++++ mezzanine_patched_e-smith-lib-compspec-0.3.0/root/etc/profile.d/e-smith-lib_compspec.sh	2005-07-18 00:15:42.255823440 -0600
+@@ -44,7 +44,7 @@
+ 
+     case $COMP_CWORD in
+     1) # config file
+-	COMPREPLY=( $(find /home/e-smith -maxdepth 1 -type f \
++	COMPREPLY=( $(find /home/e-smith/db -maxdepth 1 -type f \
+ 			\( -name '.*' -prune -o \
+ 			   -name "$cur*" -printf "%f\n" \)) )
+ 	;;

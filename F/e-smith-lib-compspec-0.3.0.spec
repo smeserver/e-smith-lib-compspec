@@ -2,7 +2,7 @@ Summary: bash completion specifications for e-smith-lib utilities
 %define name e-smith-lib-compspec
 Name: %{name}
 %define version 0.3.0
-%define release 02sme01
+%define release 02sme02
 Version: %{version}
 Release: %{release}
 Copyright: GPL
@@ -10,6 +10,7 @@ Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
 Patch0: e-smith-lib-compspec-0.3.0-02.mitel_patch
 Patch1: e-smith-lib-compspec-0.3.0-quotecur.patch
+Patch2: e-smith-lib-compspec-0.3.0-dbmoved.patch
 #Patch0: %{name}-%{version}.patch.2001041200
 Packager: Tony Clayton <tonyc@e-smith.com>
 BuildRoot: /var/tmp/e-smith-buildroot
@@ -26,6 +27,7 @@ e-smith-lib command-line utilities (db, config, expand-template, signal-event).
 %setup
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 
@@ -44,6 +46,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Sat Jul 16 2004 Shad L. Lords <slords@lordsfam.net>
+- [0.3.0-02sme02]
+- Move dbs to /home/e-smith/db
+
 * Sat Jul 16 2004 Shad L. Lords <slords@lordsfam.net>
 - [0.3.0-02sme01]
 - Fix quoting around $cur entries
