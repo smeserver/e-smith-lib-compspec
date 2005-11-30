@@ -2,7 +2,7 @@ Summary: bash completion specifications for e-smith-lib utilities
 %define name e-smith-lib-compspec
 Name: %{name}
 %define version 0.3.0
-%define release 04
+%define release 05
 Version: %{version}
 Release: %{release}
 Copyright: GPL
@@ -46,6 +46,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Wed Nov 30 2005 Gordon Rowell <gordonr@gormand.com.au> 0.3.0-05
+- Bump release number only
+
 * Mon Jul 18 2005 Charlie Brady <charlieb@e-smith.com>
 - [0.3.0-04]
 - Be prepared for move of dbs to /home/e-smith/db [SF: 1216546]
