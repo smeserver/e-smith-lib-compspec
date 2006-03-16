@@ -1,17 +1,13 @@
 Summary: bash completion specifications for e-smith-lib utilities
 %define name e-smith-lib-compspec
 Name: %{name}
-%define version 0.3.0
-%define release 05
+%define version 1.0.0
+%define release 01
 Version: %{version}
 Release: %{release}
-Copyright: GPL
+License: GPL
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
-Patch0: e-smith-lib-compspec-0.3.0-02.mitel_patch
-Patch1: e-smith-lib-compspec-0.3.0-03.mitel_patch
-Patch2: e-smith-lib-compspec-0.3.0-04.mitel_patch
-#Patch0: %{name}-%{version}.patch.2001041200
 Packager: Tony Clayton <tonyc@e-smith.com>
 BuildRoot: /var/tmp/e-smith-buildroot
 BuildArchitectures: noarch
@@ -25,9 +21,6 @@ e-smith-lib command-line utilities (db, config, expand-template, signal-event).
 
 %prep
 %setup
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
 
 %build
 
@@ -46,6 +39,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Thu Mar 16 2006 Gordon Rowell <gordonr@gormand.com.au> 1.2.0-01
+- Roll stable stream version. [SME: 1016]
+
 * Wed Nov 30 2005 Gordon Rowell <gordonr@gormand.com.au> 0.3.0-05
 - Bump release number only
 
