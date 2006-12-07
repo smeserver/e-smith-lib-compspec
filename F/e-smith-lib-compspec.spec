@@ -2,13 +2,13 @@ Summary: bash completion specifications for e-smith-lib utilities
 %define name e-smith-lib-compspec
 Name: %{name}
 %define version 1.0.0
-%define release 01
+%define release 2
 Version: %{version}
-Release: %{release}
+Release: %smerelease %{release}
+Packager: %{_packager}
 License: GPL
 Group: Networking/Daemons
 Source: %{name}-%{version}.tar.gz
-Packager: Tony Clayton <tonyc@e-smith.com>
 BuildRoot: /var/tmp/e-smith-buildroot
 BuildArchitectures: noarch
 Requires: e-smith-lib
@@ -39,6 +39,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Thu Dec 07 2006 Shad L. Lords <slords@mail.com>
+- Update to new release naming.  No functional changes.
+- Make Packager generic
+
 * Thu Mar 16 2006 Gordon Rowell <gordonr@gormand.com.au> 1.2.0-01
 - Roll stable stream version. [SME: 1016]
 
