@@ -1,8 +1,10 @@
+# $Id: e-smith-lib-compspec.spec,v 1.2 2008/10/07 18:42:14 slords Exp $
+
 Summary: bash completion specifications for e-smith-lib utilities
 %define name e-smith-lib-compspec
 Name: %{name}
-%define version 1.0.0
-%define release 2
+%define version 2.0.0
+%define release 1
 Version: %{version}
 Release: %{release}%{?dist}
 License: GPL
@@ -38,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Tue Oct 7 2008 Shad L. Lords <slords@mail.com> 2.0.0-1.sme
+- Roll new stream to separate sme7/sme8 trees [SME: 4633]
+
 * Sun Apr 29 2007 Shad L. Lords <slords@mail.com>
 - Clean up spec so package can be built by koji/plague
 
